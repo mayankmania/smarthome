@@ -11,13 +11,16 @@ Home automation with Raspberry PI 3, Node JS & ms-gpio.js
 1. Node Server
 2. ms-gpio node module
 3. HTML5/Bootstrap
-4. Linux/Rasbian.
+4. Linux/Rasbian
+5. Super user previledges
 
 ## Setup
-To run this project simply navigate to the downloaded folder, start node index
-
-See this guide on how to get [node.js running on Raspberry Pi](https://learn.adafruit.com/node-embedded-development/installing-node-dot-js).
-
+1. Start your Raspberry PI device
+2. Clone or download this project in your Raspberry PI device, for simplicity copy it on **Desktop**.
+   /home/pi/Desktop/HomeAutomation
+3. To work with Raspberry you need to run the node server as super user,run **sudo -i** command on terminal
+4. Assuming that the project is copied on **Desktop**. Now run the following **node index.js** command to start the node server
+    
 ## Usage
 Firstly, make make sure you are running your application as root or with sudo, else the Raspberry Pi will not let you output to the GPIO.
 
