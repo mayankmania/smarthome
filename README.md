@@ -15,6 +15,11 @@ Home automation with Raspberry PI 3, Node JS & ms-gpio.js
 4. Linux/Rasbian
 5. Putty, can be used for remotely connecting terminal session with Raspberry PI
 
+### Circuit creation
+1. Each device is controlled by a specific GPIO pin & a relay switch
+2. You need to create a cicuite keeping the main current passing as in input, with output coming from relay swtich to the device
+
+
 ### GPIO Pin & Device Mapping
 1. Each device is controlled by a specific GPIO pin, hence configuration of the device and pin mapping must be done in advance
 2. Current application shows a demo which can work with 4 devices, but it can be extended to more appliances
