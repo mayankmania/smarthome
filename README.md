@@ -5,7 +5,7 @@ Home automation with Raspberry PI 3, Node JS & ms-gpio.js
 ## Pre-requisites
 
 ### Hardware
-1. Raspberry Pi model B, with memory card preloaded with an Raspberrian OS
+1. Raspberry Pi model B, with memory card preloaded with an Raspbian OS
 2. 5V 10A 2 Channel Relay Module
 
 ### Software
