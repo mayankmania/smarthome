@@ -1,3 +1,7 @@
+Raspberry PI Smart Home
+==========
+Home automation with Raspberry PI 3, Node JS & ms-gpio.js
+
 ## Setup
 See this guide on how to get [node.js running on Raspberry Pi](https://learn.adafruit.com/node-embedded-development/installing-node-dot-js).
 
