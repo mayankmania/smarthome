@@ -12,7 +12,7 @@ Home automation with Raspberry PI 3, Node JS & ms-gpio.js
 ##### Default GPIO Pin & device Mapping
 1. Each device is controlled by a specific GPIO pin, hence configuration of the device and pin mapping must be done in advance
 2. Current application shows a demo which can work with 4 devices, but it can be extended to more appliances
-3. Mapping of 4 devices are given as follows:
+3. GPIO pin mapping of 4 devices are given as follows:
  * 15 : fan
  * 16 : bulb
  * 18 : washer
