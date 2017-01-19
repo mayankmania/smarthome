@@ -2,7 +2,7 @@ Raspberry PI Smart Home
 ==========
 Home automation with Raspberry PI 3, Node JS, Raspbian & ms-gpio.js
 
-## SetUp
+## Setup
 
 ### Hardware
 1. Raspberry Pi 3 model B, with at least 16gb memory card which must be preloaded with Raspbian OS. For installing Raspbian OS on memroy card, you can refer to website https://github.com/raspberrypi/noobs/blob/master/README.md
