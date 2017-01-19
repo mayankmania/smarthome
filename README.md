@@ -8,6 +8,7 @@ Home automation with Raspberry PI 3, Node JS & ms-gpio.js
 1. Raspberry Pi model B, with memory card preloaded with an Raspbian OS
 2. 5V 10A 2 Channel Relay Module
 3. Circuit creation, each device will controlled by a specific GPIO pin & a relay switch2. You need to create a cicuit keeping the main current passing as in input, with output coming from relay swtich to the device
+
 ##### Default GPIO Pin & device Mapping
 1. Each device is controlled by a specific GPIO pin, hence configuration of the device and pin mapping must be done in advance
 2. Current application shows a demo which can work with 4 devices, but it can be extended to more appliances
