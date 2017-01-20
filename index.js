@@ -2,7 +2,8 @@ var express = require('express');
 var bodyParser = require('body-parser');
 var gpioInstance = require('ms-gpio');
 //Define gpioPath to simulate raspberry on local machine
-var gpioPath;
+var gpioPath="test";
+var gpio = new gpioInstance(gpioPath);
 var app = new express();
 
 startUp();
@@ -49,7 +50,6 @@ function setUpHttpHandler() {
         ];
 
         for (var i = 0; i < devices.length; i++) {
-            var gpio = new gpioInstance(gpioPath);
             var status = gpio.read(devices[i].deviceId);
             if (status == -1) {
                 status = 0;
@@ -61,7 +61,6 @@ function setUpHttpHandler() {
 
     app.post("/", function (req, res) {
         var deviceId = req.body.deviceId;
-        var gpio = new gpioInstance(gpioPath);
         gpio.setUp(deviceId, "out");
         var currentLEDStatus = gpio.read(deviceId);
         if (currentLEDStatus == 0 || currentLEDStatus == -1) {
@@ -75,7 +74,6 @@ function setUpHttpHandler() {
 
 //Set appliance state
 function setApplianceState(pinNo, setState, response) {
-    var gpio = new gpioInstance(gpioPath);
     gpio.write(pinNo, setState);
     var jsonResult = { "status": setState, "deviceId": pinNo };
     response.json(jsonResult);
