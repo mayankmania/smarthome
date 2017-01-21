@@ -1,10 +1,6 @@
 var express = require('express');
 var bodyParser = require('body-parser');
-var gpioInstance = require('ms-gpio');
-
-//Define gpioPath to simulate raspberry on local machine, leave it blank if you are running it on Raspberry device
-var gpioPath = "test";
-var gpio = new gpioInstance(gpioPath);
+var gpio = require('ms-gpio');
 var app = new express();
 
 startUp();
@@ -17,6 +13,7 @@ var server = app.listen(app.get('port'), function () {
 
 //Register all the startup related stuffs in this function
 function startUp() {
+    gpio.GPIO_Path = "test"; //Comment it out if used in Raspberry device
     configureExternalModule();
     setUpHttpHandler();
     app.set('port', 9000);
@@ -43,9 +40,6 @@ function setUpHttpHandler() {
         var devices = getRegisteredDevices();
         for (var i = 0; i < devices.length; i++) {
             var status = gpio.read(devices[i].deviceId);
-            if (status == -1) {
-                status = 0;
-            }
             devices[i].status = status;
         }
         res.json(devices);
@@ -53,13 +47,13 @@ function setUpHttpHandler() {
 
     app.post("/", function (req, res) {
         var deviceId = req.body.deviceId;
-        gpio.setUp(deviceId, "out");
+        gpio.setUp(deviceId, gpio.OUTPUT_MODE);
         var currentLEDStatus = gpio.read(deviceId);
         if (currentLEDStatus == 0 || currentLEDStatus == -1) {
-            setApplianceState(deviceId, 1, res);
+            setApplianceState(deviceId, true, res);
         }
         else {
-            setApplianceState(deviceId, 0, res);
+            setApplianceState(deviceId, false, res);
         }
     });
 }
@@ -75,16 +69,16 @@ function setApplianceState(pinNo, setState, response) {
 function getRegisteredDevices() {
     var devices = [
         {
-            deviceId: 15, status: 0, device: "fan"
+            deviceId: 15, status: false, device: "fan"
         },
         {
-            deviceId: 16, status: 0, device: "bulb"
+            deviceId: 16, status: false, device: "bulb"
         },
         {
-            deviceId: 18, status: 0, device: "washer"
+            deviceId: 18, status: false, device: "washer"
         },
         {
-            deviceId: 19, status: 0, device: "tv"
+            deviceId: 19, status: false, device: "tv"
         }
     ];
     return devices;
