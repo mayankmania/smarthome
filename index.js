@@ -13,7 +13,6 @@ var server = app.listen(app.get('port'), function () {
 
 //Register all the startup related stuffs in this function
 function startUp() {
-    gpio.GPIO_Path = "test"; //Comment it out if used in Raspberry device
     configureExternalModule();
     setUpHttpHandler();
     app.set('port', 9000);

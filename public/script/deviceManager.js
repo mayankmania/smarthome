@@ -21,10 +21,5 @@ function manageDevice(deviceId) {
 }
 
 function setStateIcon(result) {
-    if (result.status) {
-        $("#device" + result.deviceId).attr('src', 'css/icons/start.png');
-    }
-    else if (!result.status) {
-        $("#device" + result.deviceId).attr('src', 'css/icons/stop.png');
-    }
+        $("#device" + result.deviceId).attr('src', result.status ? 'css/icons/stop.png' : 'css/icons/start.png');
 }
