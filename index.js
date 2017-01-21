@@ -39,22 +39,16 @@ function setUpHttpHandler() {
     app.use('/getDevices', function (req, res) {
         var devices = getRegisteredDevices();
         for (var i = 0; i < devices.length; i++) {
-            var status = gpio.read(devices[i].deviceId);
-            devices[i].status = status;
+            gpio.setup(devices[i].deviceId);
+            devices[i].status =  gpio.read(devices[i].deviceId);
         }
         res.json(devices);
     });
 
     app.post("/", function (req, res) {
         var deviceId = req.body.deviceId;
-        gpio.setUp(deviceId, gpio.OUTPUT_MODE);
-        var currentLEDStatus = gpio.read(deviceId);
-        if (currentLEDStatus == 0 || currentLEDStatus == -1) {
-            setApplianceState(deviceId, true, res);
-        }
-        else {
-            setApplianceState(deviceId, false, res);
-        }
+        //gpio.setup(deviceId, gpio.OUTPUT_MODE);
+        setApplianceState(deviceId, !gpio.read(deviceId), res);
     });
 }
 
