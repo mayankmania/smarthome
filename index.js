@@ -47,7 +47,7 @@ function setUpHttpHandler() {
 
     app.post("/", function (req, res) {
         var deviceId = req.body.deviceId;
-        //gpio.setup(deviceId, gpio.OUTPUT_MODE);
+        gpio.setup(deviceId, gpio.OUTPUT_MODE);
         setApplianceState(deviceId, !gpio.read(deviceId), res);
     });
 }
