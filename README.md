@@ -36,4 +36,4 @@ Home automation with Raspberry PI 3, Node JS, Raspbian & ms-gpio.js
    ```
 3. To work with Raspberry PI pins, you need to run the node server as super user, **sudo -i** command can be used for the same
 4. Assuming that the project is copied on **Desktop**. Now navigate to the path /home/pi/Desktop/smarthome, run **node index.js** command to start the node server on 9000 port. This will host our application locally on 9000 port
-5. Navigate to the browser hit localhost:9000, it should present a HTML based UI which can be used for controlling the home appliances 
+5. Navigate to the browser hit localhost:9000. It should present a HTML based UI, which can be used for controlling the home appliances 
