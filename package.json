@@ -27,7 +27,7 @@
   "dependencies": {
     "body-parser": "^1.16.0",
     "express": "^4.14.0",
-    "ms-gpio": "^1.0.1"
+    "ms-gpio": "^3.0.0"
   },
   "devDependencies": {}
 }
