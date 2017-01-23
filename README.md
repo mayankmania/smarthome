@@ -32,16 +32,36 @@ As shown in the above picture, we are always going to control the GPIO by using 
 3. HTML5/Bootstrap
 4. Linux/Rasbian
 5. Putty, can be used for remotely connecting terminal session with Raspberry PI
+6. Raspberry PI Static IP : To access the node application hosted in Raspberry PI device, we need to provide a local static IP to it. This will allow us to access the smarthome application by providing the IP from mobile/PC or any other device which are part of LAN(I had used **192.168.0.7** as my static IP for accessing the application, you can choose any other available IP)
  
 ### Access Rights
 1. Super/root user privileges
 
 ## Running the project
 1. Start your Raspberry PI device
-2. Clone or download this project in your Raspberry PI device, for simplicity copy it on **Desktop**
-   ```
-   /home/pi/Desktop/smarthome
-   ```
-3. To work with Raspberry PI pins, you need to run the node server as super user, **sudo -i** command can be used for the same
-4. Assuming that the project is copied on **Desktop**. Now navigate to the path /home/pi/Desktop/smarthome, run **node index.js** command to start the node server on 9000 port. This will host our application locally on 9000 port
-5. Navigate to the browser hit localhost:9000. It should present a HTML based UI, which can be used for controlling the home appliances 
+2. To work with Raspberry PI , you need to have a super user access, **sudo -i** command can be used for the same
+3. Navigate to the **Desktop** folder, clone/download this project in your Raspberry PI device
+   
+ ```
+ sudo -i
+   
+ cd /home/pi/Desktop
+   
+ git clone https://github.com/mayankmania/smarthome.git
+ ```
+4. Now navigate to the path /home/pi/Desktop/smarthome run the node server.
+   
+ ```
+ cd /home/pi/Desktop/smarthome
+   
+ node index.js
+ ```
+ If everything works well, your application must be hosted locally on 9000 port
+5. From any device(mobile/PC) which is connected to same LAN as Raspberry device, enter http://192.168.0.7:9000 in the browser. It should present a HTML based UI, which will provide you a list of devices along with their current status(running/stopped). You can now control each device by clicking on the play and stop button provided in front of each device 
+<br/>
+**Mobile View**
+</br>
+<img title="GPIO Numbering" alt="GPIO Numbering" src="https://github.com/mayankmania/smarthome/blob/master/UIPics/mobile.png"/> <br/>
+**Desktop View**
+<br/>
+<img title="GPIO Numbering" alt="GPIO Numbering" src="https://github.com/mayankmania/smarthome/blob/master/UIPics/Desktop.png"/> <br/>
