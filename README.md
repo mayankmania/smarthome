@@ -15,7 +15,7 @@ Relay switch shown in the above picture is a two channel relay module, only two 
 Please note, how we have created circuit between **relay switch** and an **electrical appliance**. You need to ensure that the **live current wire** from the plug goes directly into the relay switch **Common/Middle** electrical contact; and it comes out **either** from **Normally Connected** or **Normally Open** electrical contact, but not both at the same time. Also **neutral wire** from the plug must be directly connected to the electrical appliance.<br/>
 
 ##### Default GPIO Pin & device Mapping
-1. <b>Note</b>: While interacting with the GPIO pin, Raspberry Pi(BOARD/physical) pin number must be passed. Please see [this page](http://elinux.org/RPi_Low-level_peripherals) for more details. On Raspberry PI 3 device, physical pin differs from BCM numbering which is internally used
+1. <b>Note</b>: While interacting with the GPIO pin, Raspberry Pi(BOARD/physical) pin number must be passed. Please see [this page](http://elinux.org/RPi_Low-level_peripherals) for more details
 2. Each device is controlled by a specific GPIO pin, hence configuration of the eletrical device and pin mapping must be done in advance
 3. Current application shows a demo which can work with 4 devices, but it can be extended to more appliances
 4. GPIO pin mapping of 4 devices are given as follows:
