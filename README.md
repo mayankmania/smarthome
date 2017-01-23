@@ -41,7 +41,6 @@ As shown in the above picture, we are always going to control the GPIO by using 
 1. Start your Raspberry PI device
 2. To work with Raspberry PI , you need to have a super user access, **sudo -i** command can be used for the same
 3. Navigate to the **Desktop** folder, clone/download this project in your Raspberry PI device
-   
  ```
  sudo -i
    
