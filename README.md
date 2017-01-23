@@ -46,19 +46,31 @@ As shown in the above picture, we are always going to control the GPIO by using 
    
  git clone https://github.com/mayankmania/smarthome.git
  ```
-4. Now navigate to the path /home/pi/Desktop/smarthome run the node server.
-   
+4. Run the following command in the order given.
+ 
+ **Navigate to the smarthome folder**
  ```
  cd /home/pi/Desktop/smarthome
-   
+ ```
+ 
+ **Run below command to install npm packages required for this project**
+ 
+ ```
+ npm install
+ ```
+ 
+ **Run below command to run the application**
+ 
+ ```
  node index.js
  ```
  If everything works well, your application must be hosted locally on 9000 port
 5. From any device(mobile/PC) which is connected to same LAN as Raspberry device, enter http://192.168.0.7:9000 in the browser. It should present a HTML based UI, which will provide you a list of devices along with their current status(running/stopped). You can now control each device by clicking on the play and stop button provided in front of each device 
-<br/>
+<br/><br/>
 **Mobile View**
-</br>
-<img title="GPIO Numbering" alt="GPIO Numbering" src="https://github.com/mayankmania/smarthome/blob/master/UIPics/mobile.png"/> <br/>
+</br></br>
+<img title="Mobile View" alt="Mobile View" src="https://github.com/mayankmania/smarthome/blob/master/UIPics/mobile.png"/> 
+<br/></br>
 **Desktop View**
-<br/>
-<img title="GPIO Numbering" alt="GPIO Numbering" src="https://github.com/mayankmania/smarthome/blob/master/UIPics/Desktop.png"/> <br/>
+<br/></br>
+<img title="Desktop View" alt="Desktop View" src="https://github.com/mayankmania/smarthome/blob/master/UIPics/Desktop.png"/>
