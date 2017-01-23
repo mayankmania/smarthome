@@ -1,6 +1,6 @@
 Raspberry PI Smart Home
 ==========
-Home automation with Raspberry PI 3, Node JS, Raspbian & ms-gpio.js
+Home automation with Raspberry PI 3, Node JS, Raspbian OS & ms-gpio.js
 
 ## Setup
 
@@ -8,7 +8,7 @@ Home automation with Raspberry PI 3, Node JS, Raspbian & ms-gpio.js
 1. Raspberry Pi 3 model B, with at least 16gb memory card which must be preloaded with Raspbian OS. For installing Raspbian OS on memory card, you can refer to website https://github.com/raspberrypi/noobs/blob/master/README.md
 2. 5V 10A 2 Channel Relay Module <br/>
 <img title="5v 2 Channel Relay Switch" width="250" alt="Screenshot 5v 2 Channel Relay Switch" src="https://github.com/mayankmania/smarthome/raw/master/UIPics/relayswitch.jpg"/> <br/>
-Relay switch shown in the above diagram is two channel, that is only two eletrical devices can be controlled with this. For controlling more devices, you can go for 4,6 or 8 channel relay switch<br/>
+Relay switch shown in the above picture is a two channel relay module, only two eletrical devices can be controlled with this. For controlling more devices, you can go for 4,6 or 8 channel relay switch<br/>
 3. Circuit creation, each device is controlled by set of GPIO pins & relay switch channel. Depending upon the number of eletrical devices we want to control, those many number of GPIO pin needs to be connected with a channel/input on a relay switch. We need to create a cicuit keeping the live current passing as in input, with output coming from relay switch to the eletrical device. <br/> Below circuit diagram, shows a connection between Raspberry PI 3, Relay Switch and an Electrical Appliance 
 <br/>
 <img title="Cicuit Diagram" alt="Cicuit Diagram" src="https://github.com/mayankmania/smarthome/blob/master/UIPics/circuit.png"/> <br/><img title="5v 2 Channel Relay Switch" alt="Screenshot 5v 2 Channel Relay Switch" src="https://github.com/mayankmania/smarthome/blob/master/UIPics/rs_2.jpg"/> <br/>
