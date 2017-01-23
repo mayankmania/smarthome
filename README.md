@@ -1,4 +1,4 @@
-Raspberry PI Smart Home
+Smart Home with Raspberry PI
 ==========
 Home automation with Raspberry PI 3, Node JS, Raspbian OS & ms-gpio.js
 
