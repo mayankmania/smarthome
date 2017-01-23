@@ -5,7 +5,7 @@ Home automation with Raspberry PI 3, Node JS, Raspbian OS & ms-gpio.js
 ## Setup
 
 ### Hardware
-1. Raspberry Pi 3 model B, with at least 16gb memory card which must be preloaded with Raspbian OS. For installing Raspbian OS on memory card, you can refer to website https://github.com/raspberrypi/noobs/blob/master/README.md
+1. Raspberry Pi 3 model B, with at least 16gb memory card which must be preloaded with Raspbian OS. For installing Raspbian OS on memory card, you can refer to [this website] (https://www.raspberrypi.org/learning/software-guide/quickstart)
 2. 5V 10A 2 Channel Relay Module <br/>
 <img title="5v 2 Channel Relay Switch" width="250" alt="Screenshot 5v 2 Channel Relay Switch" src="https://github.com/mayankmania/smarthome/raw/master/UIPics/relayswitch.jpg"/> <br/>
 Relay switch shown in the above picture is a two channel relay module, only two eletrical devices can be controlled with this. For controlling more devices, you can go for 4,6 or 8 channel relay switch<br/>
