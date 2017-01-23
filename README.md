@@ -32,7 +32,7 @@ As shown in the above picture, we are always going to control the GPIO by using 
 3. HTML5/Bootstrap
 4. Linux/Rasbian
 5. Putty, can be used for remotely connecting terminal session with Raspberry PI
-6. Raspberry PI Static IP : To access the node application hosted in Raspberry PI device, we need to provide a local static IP to it. This will allow us to access the smarthome application by providing the IP from mobile/PC or any other device which are part of LAN(I had used **192.168.0.7** as my static IP for accessing the application, you can choose any other available IP)
+6. Raspberry PI Static IP : Assign static IP **192.168.0.7** to the Raspberry PI device. **smarthome** application can then be accessed  with the fixed IP from any device within LAN
  
 ### Access Rights
 1. Super/root user privileges
@@ -42,8 +42,6 @@ As shown in the above picture, we are always going to control the GPIO by using 
 2. To work with Raspberry PI , you need to have a super user access, **sudo -i** command can be used for the same
 3. Navigate to the **Desktop** folder, clone/download this project in your Raspberry PI device
  ```
- sudo -i
-   
  cd /home/pi/Desktop
    
  git clone https://github.com/mayankmania/smarthome.git
