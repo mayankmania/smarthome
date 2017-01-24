@@ -74,3 +74,7 @@ As shown in the above picture, we are always going to control the GPIO by using 
 **Desktop View**
 <br/></br>
 <img title="Desktop View" alt="Desktop View" src="https://github.com/mayankmania/smarthome/blob/master/UIPics/Desktop.png"/>
+
+## Smarthome in action
+[![smarthome](http://img.youtube.com/vi/KzkG1HKcA7Y/0.jpg)]
+(https://youtu.be/KzkG1HKcA7Y "click to view it in action")
